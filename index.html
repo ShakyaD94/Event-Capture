@@ -23,10 +23,10 @@
  
         console.log('Mautic Loaded');
  
-        mt('send', 'pageview', {
-            page: '/event/article-read',
-            title: 'Labor Cost Trends 2025'
-        });
+       mt('send', 'pageview', {
+    url: window.location.origin + '/event/add-to-cart/sku-123',
+    title: 'Product Added - iPhone 16'
+});
  
     };
  
