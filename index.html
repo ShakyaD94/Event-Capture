@@ -6,13 +6,14 @@
     <!-- 1. Mautic Tracking Script (Standard) -->
     <<script>
 (function(w,d,t,u,n,a,m){
+ 
     w['MauticTrackingObject']=n;
  
     w[n]=w[n]||function(){
         (w[n].q=w[n].q||[]).push(arguments)
     };
  
-    a=d.createElement(t),
+    a=d.createElement(t);
     m=d.getElementsByTagName(t)[0];
  
     a.async=1;
@@ -20,12 +21,11 @@
  
     a.onload = function() {
  
-        alert('Mautic Loaded');
+        console.log('Mautic Loaded');
  
-        mt('send', 'event', {
-            category: 'Content',
-            action: 'Article Read',
-            name: 'Labor Cost Trends 2025'
+        mt('send', 'pageview', {
+            page: '/event/article-read',
+            title: 'Labor Cost Trends 2025'
         });
  
     };
